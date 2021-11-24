@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>lesson_3_JS</title>
+    </head>
+    <body>
+        <script>
+
+            /*1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100.*/
+
+            console.log('-------№1---------');
+            let i = 0
+            while (i < 100){
+                console.log(i++);
+            }
+
+            /* 2. С этого урока начинаем работать с функционалом интернет-магазина. Предположим, есть сущность корзины. Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров. */
+            console.log('-------№2---------');
+            
+            var basket = [
+                {
+                    name: 'comp',
+                    price: 200
+                },
+                {
+                    name: 'phone',
+                    price: 300
+                },
+                {
+                    name: 'somthing',
+                    price: 5000
+                }
+            ];
+
+            let sum = 0
+            for (i of basket){
+                sum += i.price;
+            };
+            console.log(sum)
+            
+            console.log('-------№3---------');
+            /*  3. Товары в корзине хранятся в массиве. Задачи:
+                    Организовать такой массив для хранения товаров в корзине;
+                    Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
+            */
+
+            function countBasketPrice(massive_){
+
+                let sum = 0;
+                for (i of massive_){
+                    sum += i.price;
+                }
+
+                return sum;
+            }
+
+            console.log(countBasketPrice(basket));
+
+            console.log('-------№4---------');
+            /*4. Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла.*/
+
+            for(let number = 0; number <= 9; console.log(number++));
+            
+            console.log('-------№5---------');
+            /*5. Нарисовать пирамиду с 20 рядами с помощью console.log, как показано на рисунке:*/
+
+            let a = '*';
+            for (a; a.length != 20; a+='*'){
+                console.log(a);
+            };
+
+        </script>
+    </body>
+</html>
